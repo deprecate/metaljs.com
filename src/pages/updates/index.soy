@@ -1,0 +1,69 @@
+---
+title: Updates
+description: Check out what's new
+updates:
+ -
+  version: 1.0.0
+  major: true
+  features:
+   -
+    icon: hammer
+    title: Awesome bugfixes
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum.
+    url: /
+   -
+    icon: hammer
+    title: Awesome enhancements
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum.
+    url: /
+ -
+  version: 2.0.4
+  major: false
+  features:
+   -
+    icon: hammer
+    title: Awesome bugfixes
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum.
+    url: /
+   -
+    icon: hammer
+    title: Awesome enhancements
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum.
+    url: /
+   -
+    icon: hammer
+    title: Awesome enhancements
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum.
+    url: /
+---
+
+{namespace updatesIndex}
+
+
+/**
+* @param page
+* @param site
+ */
+{template .render}
+	{call main.render data="all"}
+		{param content kind="html"}
+			<div>
+				<div class="main">
+
+					{call Topbar.render data="all"}
+						
+					{/call}
+
+					<div class="docs">
+						<h2 class="header-title">{$page.title}</h2>
+						<h3 class="header-subtitle">{$page.description}</h3>
+					</div>
+				</div>
+
+				{call ElectricUpdates.render}
+					{param updates: $page.updates /}
+				{/call}
+			</div>
+		{/param}
+	{/call}
+{/template}
