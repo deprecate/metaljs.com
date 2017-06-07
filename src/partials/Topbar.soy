@@ -5,7 +5,7 @@
  * @param site
  */
 {template .render}
-	<nav class="topbar topbar-light {$elementClasses ? ' ' + $elementClasses : ''}">
+	<nav class="topbar topbar-dark {$elementClasses ? ' ' + $elementClasses : ''}">
 		{call .logo data="all" /}
 		{call .menu data="all" /}
 	</nav>
@@ -17,7 +17,7 @@
 {template .logo}
 	<div class="topbar-logo">
 		<a class="topbar-logo-link" href="/">
-			<span class="topbar-logo-icon icon-16-hammer"></span>
+			<img class="topbar-logo-image" src="/images/logo_signature@2x.png" alt="Metal.js Logo" width="35" height="28">
 			<span class="topbar-logo-text">{$site.title}</span>
 		</a>
 	</div>
@@ -34,4 +34,18 @@
 		{param listItemClasses: 'topbar-item' /}
 		{param section: $site.index /}
 	{/call}
+
+<ul class="topbar-menu">
+	<li class="topbar-menu-item">
+		<a class="rounded-icon topbar-icon-external" target="_blank" href="https://github.com/metal/metal">
+			<img src="/images/github_icon.svg" alt="GitHub Icon" width="16">
+		</a>
+	</li>
+	<li class="topbar-menu-item">
+		<a class="rounded-icon topbar-icon-external" target="_blank" href="http://metaljs-chat.wedeploy.io/">
+			<img src="/images/slack_icon.svg" alt="Slack Icon">
+		</a>
+	</li>
+</ul>
+
 {/template}
