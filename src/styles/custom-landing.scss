@@ -119,3 +119,35 @@ a {
 		float: right;
 	}
 }
+
+
+@media (max-width: 959px){
+	.header {
+		.topbar-dark {
+			padding-top: 4rem;
+		}
+
+		.header-title {
+			font-size: 52px;
+			line-height: 71px;
+		}
+
+		.topbar-dark {
+			position: relative;
+			margin-bottom: 3rem;
+			padding-top: 4rem;
+		}
+	}
+
+	.topbar-menu {
+		margin-top: 1rem;
+	}
+
+	.features .row {
+		display: block;
+
+		> div {
+			width: 100%;
+		}
+	}
+}
