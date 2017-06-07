@@ -1,0 +1,121 @@
+@import "config/config";
+
+
+h4,h5,h6 {
+	font-weight: 400;
+	font-family: "Open Sans", sans-serif;
+}
+
+h1,h2, h3 {
+	font-weight: 300;
+}
+
+h4 {
+	font-size: 32px;
+	line-height: 32px;
+}
+
+p, span, figure, legend, figcaption {
+	color: rgba(35, 50, 64, 0.6);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	font-family:"Open Sans", sans-serif;
+}
+
+a {
+	transition: box-shadow .3s ease-in-out;
+	color: $accent;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+	background: $primary;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	padding-top:0;
+	min-height: 750px;
+
+	.topbar-dark {
+		background: transparent;
+		margin-bottom: 11rem;
+		padding-top: 4rem;
+	}
+
+	.topbar-list {
+		padding-top: 1rem;
+	}
+
+	.container:before {
+		content: "";
+		display: block;
+		background: url(#{$images-folder}background_header_logo@2x.png) no-repeat;
+		background-size: 1145px 916px;
+		height: 916px;
+		position: absolute;
+		right: -560px;
+		top: 150px;
+		width: 1145px;
+	}
+
+	.header-title {
+		color: white;
+		font-family: $font-primary;
+		font-size: 72px;
+		font-weight: 300;
+		line-height: 96px;
+		margin: 0 0 76px;
+		text-align: left;
+		max-width: 793px;
+	}
+
+	.header-cta {
+		text-align: left;
+
+		a:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.footer {
+	padding: 54px 0;
+
+	.rounded-icon {
+		background: #fff;
+		margin-right: 1rem;
+	}
+
+	.footer-credits {
+		color: white;
+		font-weight: 400;
+		height: 36px;
+		line-height: 36px;
+	}
+
+	.footer-credits, .footer-link {
+		font-size: 12px;
+	}
+
+	.footer-license {
+		@extend .footer-credits;
+	}
+
+	.footer-link {
+		@include prefix(transition, color 0.3s ease-in-out, moz ms o webkit);
+		color: rgba(255, 255, 255, 0.4);
+		font-weight: 700;
+		cursor: pointer;
+
+		&:hover {
+			color: $white;
+		}
+	}
+
+	.footer-license {
+		float: right;
+	}
+}

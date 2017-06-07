@@ -1,0 +1,43 @@
+@import "../config/config";
+
+.topbar-menu {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+
+	li {
+		margin-right: 1.4rem;
+	}
+}
+
+.topbar {
+	a, span {
+		color: rgba(255, 255, 255, 0.6);
+	}
+
+
+	.topbar-logo-text {
+		color: #fff;
+	}
+
+	.topbar-logo .topbar-logo-link {
+		@include prefix(transition, opacity 0.3s ease-in-out, moz ms o webkit);
+
+		&:hover, &:focus {
+			opacity: 0.6;
+		}
+	}
+}
+
+.topbar-dark {
+	background: $primary
+}
+
+.topbar-icon-external {
+	background: $accent;
+	@include prefix(transition, opacity 0.3s ease-in-out, ms webkit o moz);
+
+	&:hover {
+		opacity:0.8;
+	}
+}

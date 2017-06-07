@@ -1,4 +1,4 @@
-$accent: #4285F4;
+@import "config/variables";
 
 @import "marble";
 
@@ -22,3 +22,7 @@ $accent: #4285F4;
 
 // Tutorial
 @import "templates/tutorial";
+
+@import "components/components";
+
+@import "custom-landing";
