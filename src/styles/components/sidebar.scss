@@ -1,0 +1,32 @@
+@import "../config/config";
+
+.docs {
+	.sidebar {
+		padding-top: 4rem;
+	}
+
+	.logo-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: #233240;
+		padding: 1rem;
+		@include prefix(transition, ease-in-out .3s all, moz ms o webkit);
+		@include prefix(transform, translateY(-100px), moz ms o webkit);
+
+		img {
+			background: $primary;
+			margin-right:1rem;
+		}
+
+		span {
+			font-weight:600;
+			color: $white;
+		}
+
+		&.flip-y {
+			@include prefix(transform, translateY(0px), moz ms o webkit);
+		}
+	}
+}

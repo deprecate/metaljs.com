@@ -1,7 +1,7 @@
 {namespace Sidebar}
 
 /**
- * @param section
+* @param section
  */
 {template .render}
 	<nav class="sidebar">
@@ -15,6 +15,13 @@
 		</a>
 
 		<div class="sidebar-toggler-content toggler-collapsed">
+			<div class="topbar-logo logo-container">
+				<a class="topbar-logo-link" href="/">
+					<img class="topbar-logo-image" src="/images/logo_signature@2x.png" alt="Metal.js Logo" width="35" height="36">
+					<span class="topbar-logo-text">Metal.Js</span>
+				</a>
+			</div>
+
 			<div class="sidebar-search">
 				{call ElectricSearchAutocomplete.render}
 					{param maxResults: 3 /}

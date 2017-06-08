@@ -1,0 +1,39 @@
+@import "../config/config";
+
+.btn {
+	@include prefix(transition, all 0.3s cubic-bezier(0.2, 1, 0.3, 1));
+
+	color: transparent;
+	text-shadow: 0 0 0 $white, 0 28px 0 transparent;
+
+	&:hover {
+		color: transparent;
+		text-shadow: 0 -15px 0px transparent, 0 0px 0px $white;
+	}
+}
+
+.btn-default {
+	border:1px solid rgba(255, 255, 255, 0.6);
+
+	&:hover {
+		border: solid 1px $white;
+		background: rgba(255, 255, 255, 0.1);
+	}
+}
+
+.btn-size-medium {
+	@extend .btn-default;
+	background: transparent;
+	max-width: 276px;
+	width: 100%;
+}
+
+.rounded-icon {
+	transition: opacity 0.3s ease-in-out;
+	border-radius: 50%;
+	display: inline-block;
+	height: 36px;
+	line-height: 34px;
+	text-align: center;
+	width: 36px;
+}

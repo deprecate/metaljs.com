@@ -1,0 +1,34 @@
+@import "../config/config";
+
+.architecture {
+	background: $light;
+	padding: 64px 0 44px;
+}
+
+.architecture-title {
+	color: rgba(35, 50, 64, 0.7);
+	font-family: "aktiv-grotesk-std", sans-serif;
+	font-size: 30px;
+	font-weight: 300;
+	margin-bottom: 44px;
+}
+
+.architecture-description {
+	margin: 0 5rem 24px 0;
+}
+
+.architecture-image:hover .architecture-image-primary, .architecture-image:focus .architecture-image-primary {
+	@include prefix(transform, translate(0px, -15px), ms o webkit moz);
+}
+.architecture-image:hover .architecture-image-secondary, .architecture-image:focus .architecture-image-secondary {
+	@include prefix(transform, scale(0.9, 0.9), ms o webkit moz);
+}
+
+.architecture-image-secondary {
+	margin: 30px 0 0 25%;
+	@include prefix(transform, scale(1, 1), ms o webkit moz);
+}
+
+.architecture-image-primary, .architecture-image-secondary {
+	@include prefix(transition, transform 500ms ease, moz ms o webkit);
+}

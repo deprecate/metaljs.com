@@ -1,0 +1,19 @@
+@import "../config/config";
+
+.calltoaction {
+	background: $accent;
+	padding:116px 0 144px;
+	text-align: center;
+
+	a, button, h4, span {
+		color: $white;
+	}
+
+	h4 {
+		font-weight:300;
+	}
+
+	.btn {
+		margin-top: 3rem;
+	}
+}
