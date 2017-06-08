@@ -17,6 +17,18 @@ class Sidebar extends Component {
 	disposed() {
 		this._toggler.dispose();
 	}
+	
+	rendered() {
+		window.addEventListener('scroll', this.bindLogoComponent);
+	}
+	
+	bindLogoComponent(){
+		if(window.pageYOffset >= 60){
+			document.querySelector('.logo-container').classList.add('flip-y');
+		}else {
+			document.querySelector('.logo-container').classList.remove('flip-y');
+		}
+	}
 };
 
 Soy.register(Sidebar, templates);
