@@ -13,6 +13,11 @@
 .topbar {
 	a, span {
 		color: rgba(255, 255, 255, 0.6);
+		@include prefix(transition, color .5s ease-in-out, moz ms o webkit);
+
+		&:hover {
+			color: $white;
+		}
 	}
 
 
@@ -29,7 +34,7 @@
 	}
 }
 
-.topbar-dark {
+.topbar-dark, .guide:not(.content) .topbar.topbar-dark {
 	background: $primary
 }
 
@@ -40,4 +45,11 @@
 	&:hover {
 		opacity:0.8;
 	}
+}
+
+.topbar.topbar-docs {
+	width: 100%;
+	position: relative;
+	z-index:9999;
+	margin-left: 0;
 }

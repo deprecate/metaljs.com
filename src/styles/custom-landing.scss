@@ -49,16 +49,20 @@ a {
 		padding-top: 1rem;
 	}
 
-	.container:before {
-		content: "";
-		display: block;
-		background: url(#{$images-folder}background_header_logo@2x.png) no-repeat;
-		background-size: 1145px 916px;
-		height: 916px;
-		position: absolute;
-		right: -560px;
-		top: 150px;
-		width: 1145px;
+	.container{
+		position: relative;
+
+		&:before {
+			content: "";
+			display: block;
+			background: url(#{$images-folder}background_header_logo@2x.png) no-repeat;
+			background-size: 1145px 916px;
+			height: 916px;
+			position: absolute;
+			right: -560px;
+			top: 150px;
+			width: 1145px;
+		}
 	}
 
 	.header-title {
