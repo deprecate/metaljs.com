@@ -77,6 +77,7 @@ Calculator.STATE = {
 			at <strong>State</strong>'s <a href="http://github.com/metal/metal-state/blob/c87ac15b8a9fa3ee64c421f22411f97cd376024a/src/State.js#L61">docs</a>.
 		</p>
 
+		{call .internalState /}
 		{call .acessingAndUpdating /}
 
 		<h2 id="config">Configuration data</h2>
@@ -100,6 +101,36 @@ console.log(obj.config.foo); // Prints 'foo'{/literal}
 
 	{/param}
 {/call}
+{/template}
+
+/**
+ * Content added after a State example.
+ */
+{template .internalState}
+	<h2>Internal States</h2>
+
+	<p>
+		You can define a state to be used internally in your component only, just
+		add an <b>internal</b> attribute in the configuration object. By doing this
+		the state will behave exactly as expected, including re-rendering the
+		component. The difference is, internal states can not be accessed by parent
+		components.
+	</p>
+	<p>
+		This is not necessary for JSX components, since Metal JSX components
+		have its own State Manager implementation. For that reason, two static properties
+		are used, STATE and PROPS, that behaves pretty closer to React
+		<b> state</b> and <b>props</b>. To see exactly how it works
+		read <a href="/docs/jsx-components.html">JSX components section</a>
+	</p>
+	<textarea class="code" data-mode="javascript">
+{literal}Calculator.STATE = {
+  number: {
+    ...
+    internal: true
+  }
+}{/literal}
+		</textarea>
 {/template}
 
 /**
